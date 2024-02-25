@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listOfPizzaFragment">
+
+    <fragment
+        android:id="@+id/listOfPizzaFragment"
+        android:name="com.example.pizzahut.ListOfPizzaFragment"
+        android:label="ListOfPizzaFragment" >
+        <action
+            android:id="@+id/action_listOfPizzaFragment_to_pizzaDetailsFragment"
+            app:destination="@id/pizzaDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pizzaDetailsFragment"
+        android:name="com.example.pizzahut.PizzaDetailsFragment"
+        android:label="PizzaDetailsFragment" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="img"
+            app:argType="integer" />
+        <argument
+            android:name="desc"
+            app:argType="string" />
+        <argument
+            android:name="price"
+            app:argType="integer" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+    </fragment>
+</navigation>
